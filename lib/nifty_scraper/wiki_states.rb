@@ -100,8 +100,7 @@ module NiftyScraper
 
           # state data
           # th contains state name, td contains all other data
-          t = row.search('th').text
-          state_name = clean(t, false)
+          state_name = clean(row.search('th').text, false)
           object = { headers.first => state_name }
           cells = row.search('td').map { |cell| clean(cell.text, false) }
 
