@@ -332,7 +332,7 @@
   {
     "name": "Minnesota",
     "postal_abbreviation": "MN",
-    "capital_city": "St. Paul",
+    "capital_city": "St Paul",
     "largest_city": "Minneapolis",
     "established": "May 11, 1858",
     "population": "5,519,952",
@@ -495,7 +495,7 @@
     "reps": "13"
   },
   {
-    "name": " North Dakota",
+    "name": "North Dakota",
     "postal_abbreviation": "ND",
     "capital_city": "Bismarck",
     "largest_city": "Fargo",
