@@ -1,6 +1,6 @@
 require_relative '../spec_helper'
 
-module NiftyScrapper
+module NiftyScraper
   describe WikiStates do
     describe 'url' do
       it 'has a valid url' do

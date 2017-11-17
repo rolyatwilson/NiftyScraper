@@ -1,4 +1,4 @@
-module NiftyScrapper
+module NiftyScraper
   class WikiStates
     class << self
       def url

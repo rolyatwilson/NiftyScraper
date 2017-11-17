@@ -1,11 +1,11 @@
 #!/usr/bin/env ruby
 
-require_relative '../lib/nifty_scrapper'
+require_relative '../lib/nifty_scraper'
 
-module NiftyScrapper
+module NiftyScraper
   module CLI
     class Main < Thor
-      desc 'wiki_states', 'Nifty Scrapper'
+      desc 'wiki_states', 'Nifty Scraper'
       def wiki_states
         data = WikiStates.parse
         WikiStates.write_json_file(data)
@@ -17,4 +17,4 @@ module NiftyScrapper
   end
 end
 
-NiftyScrapper::CLI::Main.start(ARGV)
+NiftyScraper::CLI::Main.start(ARGV)

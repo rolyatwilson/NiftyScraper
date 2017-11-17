@@ -1,4 +1,4 @@
-require_relative '../lib/nifty_scrapper'
+require_relative '../lib/nifty_scraper'
 
 RSpec.configure do |c|
   c.raise_errors_for_deprecations!
