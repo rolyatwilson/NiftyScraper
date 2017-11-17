@@ -73,8 +73,8 @@ module NiftyScraper
 
       def parse
         document = Nokogiri::HTML(open(url))
-        headers = []
-        data = []
+        headers  = []
+        data     = []
 
         document.at('table').search('tr').each_with_index do |row, index|
           # main headers
@@ -101,8 +101,8 @@ module NiftyScraper
           # state data
           # th contains state name, td contains all other data
           state_name = clean(row.search('th').text, false)
-          object = { headers.first => state_name }
-          cells = row.search('td').map { |cell| clean(cell.text, false) }
+          object     = { headers.first => state_name }
+          cells      = row.search('td').map { |cell| clean(cell.text, false) }
 
           # some states have 1 less cell because their capital city is also their largest city
           cells.insert(1, cells[1]) if cells.length == 11

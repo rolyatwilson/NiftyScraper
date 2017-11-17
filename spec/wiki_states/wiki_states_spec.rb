@@ -13,38 +13,38 @@ module NiftyScraper
     describe 'clean' do
       it 'removes trailing whitespace' do
         test_string = "Test\n"
-        exp_string = 'test'
+        exp_string  = 'test'
         expect(WikiStates.clean(test_string)).to eq(exp_string)
       end
 
       it 'removes leading whitespace' do
         test_string = "\nTest"
-        exp_string = 'test'
+        exp_string  = 'test'
         expect(WikiStates.clean(test_string)).to eq(exp_string)
       end
 
       it 'removes 1 set of brackets"' do
         test_string = "Test\n[B]"
-        exp_string = 'test'
+        exp_string  = 'test'
         expect(WikiStates.clean(test_string)).to eq(exp_string)
       end
 
       it 'removes 2 sets of brackets' do
         test_string = "Test\n[B][10]"
-        exp_string = 'test'
+        exp_string  = 'test'
         expect(WikiStates.clean(test_string)).to eq(exp_string)
       end
 
       it 'removes special characters' do
         test_string = '@Alabama'
-        exp_string = 'Alabama'
+        exp_string  = 'Alabama'
         expect(WikiStates.clean(test_string, false)).to eq(exp_string)
       end
 
       # "North Dakota has 2 leading special characters, ¯\_(ツ)_/¯"
       it 'remove multiple leading special characters' do
         test_string = '@!North Dakota'
-        exp_string = 'North Dakota'
+        exp_string  = 'North Dakota'
         expect(WikiStates.clean(test_string, false)).to eq(exp_string)
       end
 
@@ -61,7 +61,7 @@ module NiftyScraper
     describe 'to_snake' do
       it 'converts middle whitespace to "_"' do
         test_string = 'test test'
-        exp_string = 'test_test'
+        exp_string  = 'test_test'
         expect(WikiStates.to_snake(test_string)).to eq(exp_string)
       end
 
@@ -79,15 +79,15 @@ module NiftyScraper
 
       it 'handles & compounds' do
         header = 'name & postal'
-        exp = %w[name postal]
+        exp    = %w[name postal]
         expect(WikiStates.parse_main_headers(header)).to eq(exp)
       end
     end
 
     describe 'merge sub_header' do
       it 'merges sub headers into main headers' do
-        main_headers = ['name', 'postal', 'cities', 'established', 'population', 'total area', 'land area', 'water area', 'reps']
-        sub_headers = %w[capital largest mi2 km2 mi2 km2 mi2 km2]
+        main_headers   = ['name', 'postal', 'cities', 'established', 'population', 'total area', 'land area', 'water area', 'reps']
+        sub_headers    = %w[capital largest mi2 km2 mi2 km2 mi2 km2]
         merged_headers = %w[name postal capital_city largest_city established population total_area_mi2 total_area_km2 land_area_mi2 land_area_km2 water_area_mi2 water_area_km2 reps]
         expect(WikiStates.merge_sub_headers(main_headers, sub_headers)).to eq(merged_headers)
       end
