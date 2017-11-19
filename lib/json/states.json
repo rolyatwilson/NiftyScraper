@@ -1,0 +1,146 @@
+{
+  "Alabama": {
+    "borders": ["Mississippi", "Tennessee", "Georgia", "Florida"]
+  },
+  "Alaska": {
+    "borders": []
+  },
+  "Arizona": {
+    "borders": ["California", "Nevada", "Utah", "Colorado", "New Mexico"]
+  },
+  "Arkansas": {
+    "borders": ["Missouri", "Tennessee", "Mississippi", "Louisiana", "Texas", "Oklahoma"]
+  },
+  "California": {
+    "borders": ["Oregon", "Nevada", "Arizona"]
+  },
+  "Colorado": {
+    "borders": ["Utah", "Wyoming", "Oklahoma", "Nebraska", "New Mexico", "Arizona", "Kansas"]
+  },
+  "Connecticut": {
+    "borders": []
+  },
+  "Delaware": {
+    "borders": []
+  },
+  "Florida": {
+    "borders": []
+  },
+  "Georgia": {
+    "borders": []
+  },
+  "Hawaii": {
+    "borders": []
+  },
+  "Idaho": {
+    "borders": []
+  },
+  "Iowa": {
+    "borders": []
+  },
+  "Kansas": {
+    "borders": []
+  },
+  "Kentucky": {
+    "borders": []
+  },
+  "Louisiana": {
+    "borders": []
+  },
+  "Maine": {
+    "borders": []
+  },
+  "Maryland": {
+    "borders": []
+  },
+  "Massachusetts": {
+    "borders": []
+  },
+  "Michigan": {
+    "borders": []
+  },
+  "Minnesota": {
+    "borders": []
+  },
+  "Mississippi": {
+    "borders": []
+  },
+  "Missouri": {
+    "borders": []
+  },
+  "Montana": {
+    "borders": []
+  },
+  "Nebraska": {
+    "borders": []
+  },
+  "Nevada": {
+    "borders": []
+  },
+  "New Hampshire": {
+    "borders": []
+  },
+  "New Jersey": {
+    "borders": []
+  },
+  "New Mexico": {
+    "borders": []
+  },
+  "New York": {
+    "borders": []
+  },
+  "North Carolina": {
+    "borders": []
+  },
+  "North Dakota": {
+    "borders": []
+  },
+  "Ohio": {
+    "borders": []
+  },
+  "Oklahoma": {
+    "borders": []
+  },
+  "Oregon": {
+    "borders": []
+  },
+  "Pennsylvania": {
+    "borders": []
+  },
+  "Rhode Island": {
+    "borders": []
+  },
+  "South Carolina": {
+    "borders": []
+  },
+  "South Dakota": {
+    "borders": []
+  },
+  "Tennessee": {
+    "borders": []
+  },
+  "Texas": {
+    "borders": []
+  },
+  "Utah": {
+    "borders": []
+  },
+  "Vermont": {
+    "borders": []
+  },
+  "Virginia": {
+    "borders": []
+  },
+  "Washington": {
+    "borders": []
+  },
+  "West Virginia": {
+    "borders": []
+  },
+  "Wisconsin": {
+    "borders": []
+  },
+  "Wyoming": {
+    "borders": []
+  }
+}
