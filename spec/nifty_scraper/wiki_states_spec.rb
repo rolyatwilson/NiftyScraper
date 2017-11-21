@@ -96,24 +96,6 @@ module NiftyScraper
       end
     end
 
-    describe 'write_json_file' do
-      let(:path) { File.expand_path(File.join(__dir__, '../fixtures', 'test.json')) }
-      let(:data) { { hello: :world } }
-      before(:each) do
-        File.delete(path) if File.exist?(path)
-        WikiStates.write_json_file(data, path)
-      end
-
-      it 'creates new file' do
-        expect(File.exist?(path))
-      end
-
-      it 'writes contents to disk' do
-        json = JSON.parse(File.read(path)).deep_symbolize_keys!
-        expect(json[:hello]).to eq('world')
-      end
-    end
-
     describe 'parse', :vcr do
       let(:data) { WikiStates.parse }
 
@@ -134,7 +116,6 @@ module NiftyScraper
 
       it 'returns state properties' do
         data.values.each do |state|
-          # expect(state[:name]).not_to be_empty
           expect(state[:postal_abbreviation].length).to be(2)
           expect(state[:capital_city]).not_to be_empty
           expect(state[:largest_city]).not_to be_empty

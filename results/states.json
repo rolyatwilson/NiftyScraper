@@ -1,6 +1,5 @@
-[
-  {
-    "name": "Alabama",
+{
+  "Alabama": {
     "postal_abbreviation": "AL",
     "capital_city": "Montgomery",
     "largest_city": "Birmingham",
@@ -14,8 +13,7 @@
     "water_area_km2": "4,597",
     "reps": "7"
   },
-  {
-    "name": "Alaska",
+  "Alaska": {
     "postal_abbreviation": "AK",
     "capital_city": "Juneau",
     "largest_city": "Anchorage",
@@ -29,8 +27,7 @@
     "water_area_km2": "245,384",
     "reps": "1"
   },
-  {
-    "name": "Arizona",
+  "Arizona": {
     "postal_abbreviation": "AZ",
     "capital_city": "Phoenix",
     "largest_city": "Phoenix",
@@ -44,8 +41,7 @@
     "water_area_km2": "1,026",
     "reps": "9"
   },
-  {
-    "name": "Arkansas",
+  "Arkansas": {
     "postal_abbreviation": "AR",
     "capital_city": "Little Rock",
     "largest_city": "Little Rock",
@@ -59,8 +55,7 @@
     "water_area_km2": "2,961",
     "reps": "4"
   },
-  {
-    "name": "California",
+  "California": {
     "postal_abbreviation": "CA",
     "capital_city": "Sacramento",
     "largest_city": "Los Angeles",
@@ -74,8 +69,7 @@
     "water_area_km2": "20,501",
     "reps": "53"
   },
-  {
-    "name": "Colorado",
+  "Colorado": {
     "postal_abbreviation": "CO",
     "capital_city": "Denver",
     "largest_city": "Denver",
@@ -89,8 +83,7 @@
     "water_area_km2": "1,170",
     "reps": "7"
   },
-  {
-    "name": "Connecticut",
+  "Connecticut": {
     "postal_abbreviation": "CT",
     "capital_city": "Hartford",
     "largest_city": "Bridgeport",
@@ -104,8 +97,7 @@
     "water_area_km2": "1,816",
     "reps": "5"
   },
-  {
-    "name": "Delaware",
+  "Delaware": {
     "postal_abbreviation": "DE",
     "capital_city": "Dover",
     "largest_city": "Wilmington",
@@ -119,8 +111,7 @@
     "water_area_km2": "1,399",
     "reps": "1"
   },
-  {
-    "name": "Florida",
+  "Florida": {
     "postal_abbreviation": "FL",
     "capital_city": "Tallahassee",
     "largest_city": "Jacksonville",
@@ -134,8 +125,7 @@
     "water_area_km2": "31,424",
     "reps": "27"
   },
-  {
-    "name": "Georgia",
+  "Georgia": {
     "postal_abbreviation": "GA",
     "capital_city": "Atlanta",
     "largest_city": "Atlanta",
@@ -149,8 +139,7 @@
     "water_area_km2": "4,951",
     "reps": "14"
   },
-  {
-    "name": "Hawaii",
+  "Hawaii": {
     "postal_abbreviation": "HI",
     "capital_city": "Honolulu",
     "largest_city": "Honolulu",
@@ -164,8 +153,7 @@
     "water_area_km2": "11,678",
     "reps": "2"
   },
-  {
-    "name": "Idaho",
+  "Idaho": {
     "postal_abbreviation": "ID",
     "capital_city": "Boise",
     "largest_city": "Boise",
@@ -179,8 +167,7 @@
     "water_area_km2": "2,398",
     "reps": "2"
   },
-  {
-    "name": "Illinois",
+  "Illinois": {
     "postal_abbreviation": "IL",
     "capital_city": "Springfield",
     "largest_city": "Chicago",
@@ -194,8 +181,7 @@
     "water_area_km2": "6,202",
     "reps": "18"
   },
-  {
-    "name": "Indiana",
+  "Indiana": {
     "postal_abbreviation": "IN",
     "capital_city": "Indianapolis",
     "largest_city": "Indianapolis",
@@ -209,8 +195,7 @@
     "water_area_km2": "1,537",
     "reps": "9"
   },
-  {
-    "name": "Iowa",
+  "Iowa": {
     "postal_abbreviation": "IA",
     "capital_city": "Des Moines",
     "largest_city": "Des Moines",
@@ -224,8 +209,7 @@
     "water_area_km2": "1,077",
     "reps": "4"
   },
-  {
-    "name": "Kansas",
+  "Kansas": {
     "postal_abbreviation": "KS",
     "capital_city": "Topeka",
     "largest_city": "Wichita",
@@ -239,8 +223,7 @@
     "water_area_km2": "1,346",
     "reps": "4"
   },
-  {
-    "name": "Kentucky",
+  "Kentucky": {
     "postal_abbreviation": "KY",
     "capital_city": "Frankfort",
     "largest_city": "Louisville",
@@ -254,8 +237,7 @@
     "water_area_km2": "2,387",
     "reps": "6"
   },
-  {
-    "name": "Louisiana",
+  "Louisiana": {
     "postal_abbreviation": "LA",
     "capital_city": "Baton Rouge",
     "largest_city": "New Orleans",
@@ -269,8 +251,7 @@
     "water_area_km2": "23,761",
     "reps": "6"
   },
-  {
-    "name": "Maine",
+  "Maine": {
     "postal_abbreviation": "ME",
     "capital_city": "Augusta",
     "largest_city": "Portland",
@@ -284,8 +265,7 @@
     "water_area_km2": "11,750",
     "reps": "2"
   },
-  {
-    "name": "Maryland",
+  "Maryland": {
     "postal_abbreviation": "MD",
     "capital_city": "Annapolis",
     "largest_city": "Baltimore",
@@ -299,8 +279,7 @@
     "water_area_km2": "6,990",
     "reps": "8"
   },
-  {
-    "name": "Massachusetts",
+  "Massachusetts": {
     "postal_abbreviation": "MA",
     "capital_city": "Boston",
     "largest_city": "Boston",
@@ -314,8 +293,7 @@
     "water_area_km2": "7,134",
     "reps": "9"
   },
-  {
-    "name": "Michigan",
+  "Michigan": {
     "postal_abbreviation": "MI",
     "capital_city": "Lansing",
     "largest_city": "Detroit",
@@ -329,8 +307,7 @@
     "water_area_km2": "104,052",
     "reps": "14"
   },
-  {
-    "name": "Minnesota",
+  "Minnesota": {
     "postal_abbreviation": "MN",
     "capital_city": "St Paul",
     "largest_city": "Minneapolis",
@@ -344,8 +321,7 @@
     "water_area_km2": "18,930",
     "reps": "8"
   },
-  {
-    "name": "Mississippi",
+  "Mississippi": {
     "postal_abbreviation": "MS",
     "capital_city": "Jackson",
     "largest_city": "Jackson",
@@ -359,8 +335,7 @@
     "water_area_km2": "3,907",
     "reps": "4"
   },
-  {
-    "name": "Missouri",
+  "Missouri": {
     "postal_abbreviation": "MO",
     "capital_city": "Jefferson City",
     "largest_city": "Kansas City",
@@ -374,8 +349,7 @@
     "water_area_km2": "2,501",
     "reps": "8"
   },
-  {
-    "name": "Montana",
+  "Montana": {
     "postal_abbreviation": "MT",
     "capital_city": "Helena",
     "largest_city": "Billings",
@@ -389,8 +363,7 @@
     "water_area_km2": "3,869",
     "reps": "1"
   },
-  {
-    "name": "Nebraska",
+  "Nebraska": {
     "postal_abbreviation": "NE",
     "capital_city": "Lincoln",
     "largest_city": "Omaha",
@@ -404,8 +377,7 @@
     "water_area_km2": "1,356",
     "reps": "3"
   },
-  {
-    "name": "Nevada",
+  "Nevada": {
     "postal_abbreviation": "NV",
     "capital_city": "Carson City",
     "largest_city": "Las Vegas",
@@ -419,8 +391,7 @@
     "water_area_km2": "2,048",
     "reps": "4"
   },
-  {
-    "name": "New Hampshire",
+  "New Hampshire": {
     "postal_abbreviation": "NH",
     "capital_city": "Concord",
     "largest_city": "Manchester",
@@ -434,8 +405,7 @@
     "water_area_km2": "1,027",
     "reps": "2"
   },
-  {
-    "name": "New Jersey",
+  "New Jersey": {
     "postal_abbreviation": "NJ",
     "capital_city": "Trenton",
     "largest_city": "Newark",
@@ -449,8 +419,7 @@
     "water_area_km2": "3,544",
     "reps": "12"
   },
-  {
-    "name": "New Mexico",
+  "New Mexico": {
     "postal_abbreviation": "NM",
     "capital_city": "Santa Fe",
     "largest_city": "Albuquerque",
@@ -464,8 +433,7 @@
     "water_area_km2": "757",
     "reps": "3"
   },
-  {
-    "name": "New York",
+  "New York": {
     "postal_abbreviation": "NY",
     "capital_city": "Albany",
     "largest_city": "New York City",
@@ -479,8 +447,7 @@
     "water_area_km2": "19,240",
     "reps": "27"
   },
-  {
-    "name": "North Carolina",
+  "North Carolina": {
     "postal_abbreviation": "NC",
     "capital_city": "Raleigh",
     "largest_city": "Charlotte",
@@ -494,8 +461,7 @@
     "water_area_km2": "13,471",
     "reps": "13"
   },
-  {
-    "name": "North Dakota",
+  "North Dakota": {
     "postal_abbreviation": "ND",
     "capital_city": "Bismarck",
     "largest_city": "Fargo",
@@ -509,8 +475,7 @@
     "water_area_km2": "4,397",
     "reps": "1"
   },
-  {
-    "name": "Ohio",
+  "Ohio": {
     "postal_abbreviation": "OH",
     "capital_city": "Columbus",
     "largest_city": "Columbus",
@@ -524,8 +489,7 @@
     "water_area_km2": "10,269",
     "reps": "16"
   },
-  {
-    "name": "Oklahoma",
+  "Oklahoma": {
     "postal_abbreviation": "OK",
     "capital_city": "Oklahoma City",
     "largest_city": "Oklahoma City",
@@ -539,8 +503,7 @@
     "water_area_km2": "3,377",
     "reps": "5"
   },
-  {
-    "name": "Oregon",
+  "Oregon": {
     "postal_abbreviation": "OR",
     "capital_city": "Salem",
     "largest_city": "Portland",
@@ -554,8 +517,7 @@
     "water_area_km2": "6,191",
     "reps": "5"
   },
-  {
-    "name": "Pennsylvania",
+  "Pennsylvania": {
     "postal_abbreviation": "PA",
     "capital_city": "Harrisburg",
     "largest_city": "Philadelphia",
@@ -569,8 +531,7 @@
     "water_area_km2": "3,397",
     "reps": "18"
   },
-  {
-    "name": "Rhode Island",
+  "Rhode Island": {
     "postal_abbreviation": "RI",
     "capital_city": "Providence",
     "largest_city": "Providence",
@@ -584,8 +545,7 @@
     "water_area_km2": "1,324",
     "reps": "2"
   },
-  {
-    "name": "South Carolina",
+  "South Carolina": {
     "postal_abbreviation": "SC",
     "capital_city": "Columbia",
     "largest_city": "Charleston",
@@ -599,8 +559,7 @@
     "water_area_km2": "5,076",
     "reps": "7"
   },
-  {
-    "name": "South Dakota",
+  "South Dakota": {
     "postal_abbreviation": "SD",
     "capital_city": "Pierre",
     "largest_city": "Sioux Falls",
@@ -614,8 +573,7 @@
     "water_area_km2": "3,379",
     "reps": "1"
   },
-  {
-    "name": "Tennessee",
+  "Tennessee": {
     "postal_abbreviation": "TN",
     "capital_city": "Nashville",
     "largest_city": "Nashville",
@@ -629,8 +587,7 @@
     "water_area_km2": "2,355",
     "reps": "9"
   },
-  {
-    "name": "Texas",
+  "Texas": {
     "postal_abbreviation": "TX",
     "capital_city": "Austin",
     "largest_city": "Houston",
@@ -644,8 +601,7 @@
     "water_area_km2": "19,075",
     "reps": "36"
   },
-  {
-    "name": "Utah",
+  "Utah": {
     "postal_abbreviation": "UT",
     "capital_city": "Salt Lake City",
     "largest_city": "Salt Lake City",
@@ -659,8 +615,7 @@
     "water_area_km2": "7,064",
     "reps": "4"
   },
-  {
-    "name": "Vermont",
+  "Vermont": {
     "postal_abbreviation": "VT",
     "capital_city": "Montpelier",
     "largest_city": "Burlington",
@@ -674,8 +629,7 @@
     "water_area_km2": "1,035",
     "reps": "1"
   },
-  {
-    "name": "Virginia",
+  "Virginia": {
     "postal_abbreviation": "VA",
     "capital_city": "Richmond",
     "largest_city": "Virginia Beach",
@@ -689,8 +643,7 @@
     "water_area_km2": "8,508",
     "reps": "11"
   },
-  {
-    "name": "Washington",
+  "Washington": {
     "postal_abbreviation": "WA",
     "capital_city": "Olympia",
     "largest_city": "Seattle",
@@ -704,8 +657,7 @@
     "water_area_km2": "12,542",
     "reps": "10"
   },
-  {
-    "name": "West Virginia",
+  "West Virginia": {
     "postal_abbreviation": "WV",
     "capital_city": "Charleston",
     "largest_city": "Charleston",
@@ -719,8 +671,7 @@
     "water_area_km2": "497",
     "reps": "3"
   },
-  {
-    "name": "Wisconsin",
+  "Wisconsin": {
     "postal_abbreviation": "WI",
     "capital_city": "Madison",
     "largest_city": "Milwaukee",
@@ -734,8 +685,7 @@
     "water_area_km2": "29,367",
     "reps": "8"
   },
-  {
-    "name": "Wyoming",
+  "Wyoming": {
     "postal_abbreviation": "WY",
     "capital_city": "Cheyenne",
     "largest_city": "Cheyenne",
@@ -749,4 +699,4 @@
     "water_area_km2": "1,864",
     "reps": "1"
   }
-]
+}
