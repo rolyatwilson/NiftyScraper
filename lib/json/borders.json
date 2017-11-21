@@ -9,16 +9,16 @@
     "borders": ["California", "Nevada", "Utah", "Colorado", "New Mexico"]
   },
   "Arkansas": {
-    "borders": ["Missouri", "Tennessee", "Mississippi", "Louisiana", "Texas", "Oklahoma"]
+    "borders": ["Oklahoma", "Missouri", "Tennessee", "Mississippi", "Louisiana", "Texas"]
   },
   "California": {
     "borders": ["Oregon", "Nevada", "Arizona"]
   },
   "Colorado": {
-    "borders": ["Utah", "Wyoming", "Oklahoma", "Nebraska", "New Mexico", "Arizona", "Kansas"]
+    "borders": ["Utah", "Wyoming", "Nebraska", "Kansas", "Oklahoma", "New Mexico", "Arizona"]
   },
   "Connecticut": {
-    "borders": []
+    "borders": ["New York", "Massachusetts", "Rhode Island"]
   },
   "Delaware": {
     "borders": []
@@ -33,6 +33,12 @@
     "borders": []
   },
   "Idaho": {
+    "borders": []
+  },
+  "Illinois": {
+    "borders": []
+  },
+  "Indiana": {
     "borders": []
   },
   "Iowa": {

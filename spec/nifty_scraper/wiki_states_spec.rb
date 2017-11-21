@@ -83,7 +83,7 @@ module NiftyScraper
 
       it 'has strings' do
         headers.each do |header|
-          expect(header).to be_a(String)
+          expect(header).to be_a(Symbol)
           expect(header).not_to be_empty
         end
       end
@@ -98,7 +98,7 @@ module NiftyScraper
 
     describe 'write_json_file' do
       let(:path) { File.expand_path(File.join(__dir__, '../fixtures', 'test.json')) }
-      let(:data) { { 'hello' => 'world' } }
+      let(:data) { { hello: :world } }
       before(:each) do
         File.delete(path) if File.exist?(path)
         WikiStates.write_json_file(data, path)
@@ -109,14 +109,13 @@ module NiftyScraper
       end
 
       it 'writes contents to disk' do
-        json = JSON.parse(File.read(path))
-        expect(json['hello']).to eq('world')
+        json = JSON.parse(File.read(path)).deep_symbolize_keys!
+        expect(json[:hello]).to eq('world')
       end
     end
 
     describe 'parse', :vcr do
       let(:data) { WikiStates.parse }
-      let(:states) { ['Alabama', 'Alaska', 'Arizona', 'Arkansas', 'California', 'Colorado', 'Connecticut', 'Delaware', 'Florida', 'Georgia', 'Hawaii', 'Idaho', 'Illinois', 'Indiana', 'Iowa', 'Kansas', 'Kentucky', 'Louisiana', 'Maine', 'Maryland', 'Massachusetts', 'Michigan', 'Minnesota', 'Mississippi', 'Missouri', 'Montana', 'Nebraska', 'Nevada', 'New Hampshire', 'New Jersey', 'New Mexico', 'New York', 'North Carolina', 'North Dakota', 'Ohio', 'Oklahoma', 'Oregon', 'Pennsylvania', 'Rhode Island', 'South Carolina', 'South Dakota', 'Tennessee', 'Texas', 'Utah', 'Vermont', 'Virginia', 'Washington', 'West Virginia', 'Wisconsin', 'Wyoming'] }
 
       it 'returns an array' do
         expect(data).to be_a(Array)
@@ -124,27 +123,27 @@ module NiftyScraper
 
       it 'returns 50 states' do
         expect(data.length).to eq(50)
-        expect(data.length).to eq(states.length)
+        expect(data.length).to eq(@states.length)
       end
 
       it 'returns states with the correct names' do
-        expect(data.map { |state| state['name'] }).to eq(states)
+        expect(data.map { |state| state[:name].to_sym }).to eq(@states)
       end
 
       it 'returns state properties' do
         data.each do |state|
-          expect(state['name']).not_to be_empty
-          expect(state['postal_abbreviation'].length).to be(2)
-          expect(state['capital_city']).not_to be_empty
-          expect(state['largest_city']).not_to be_empty
-          expect(state['established']).not_to be_empty
-          expect(state['population']).not_to be_empty
+          expect(state[:name]).not_to be_empty
+          expect(state[:postal_abbreviation].length).to be(2)
+          expect(state[:capital_city]).not_to be_empty
+          expect(state[:largest_city]).not_to be_empty
+          expect(state[:established]).not_to be_empty
+          expect(state[:population]).not_to be_empty
         end
       end
 
       it 'returns states with established dates' do
         data.each do |state|
-          date = Date.strptime(state['established'], '%b %d, %Y')
+          date = Date.strptime(state[:established], '%b %d, %Y')
           expect(date).to be_a(Date)
           expect(date).to be > (Date.parse('01-01-1787')) # Delaware
           expect(date).to be < (Date.parse('01-09-1959')) # Hawaii

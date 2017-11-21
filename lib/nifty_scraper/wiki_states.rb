@@ -24,12 +24,12 @@ module NiftyScraper
         to_snake(clean(text))
       end
 
-      def write_json_file(data, path = File.expand_path(File.join(__dir__, '../../results', 'states.json')))
+      def write_json_file(data, path = File.expand_path(File.join(__dir__, '../../results', 'borders.json')))
         File.open(path, 'w') { |f| f.write(JSON.pretty_generate(JSON[data.to_json])) }
       end
 
       def headers
-        @headers ||= %w{name postal_abbreviation capital_city largest_city established population total_area_mi2 total_area_km2 land_area_mi2 land_area_km2 water_area_mi2 water_area_km2 reps}
+        @headers ||= %i{name postal_abbreviation capital_city largest_city established population total_area_mi2 total_area_km2 land_area_mi2 land_area_km2 water_area_mi2 water_area_km2 reps}
       end
 
       def parse
