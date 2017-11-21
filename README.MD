@@ -10,7 +10,7 @@ bundle install
 
 ## Run
 ```bash
-./bin/nifty_scraper
+./bin/nifty_scraper start
 ```
 Then check the `results` directory for the json file.
 
