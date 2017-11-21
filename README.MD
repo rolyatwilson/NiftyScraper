@@ -1,5 +1,5 @@
 # NiftyScraper
-[![Build Status](https://travis-ci.org/rolyatwilson/smoggy.svg?branch=master)](https://travis-ci.org/rolyatwilson/NiftyScraper.svg?branch=master)
+[![Build Status](https://travis-ci.org/rolyatwilson/NiftyScraper.svg?branch=master)](https://travis-ci.org/rolyatwilson/NiftyScraper)
 
 Scrapes Wikipedia for some basic information on the 50 US States.
 Results are written to a json file.
