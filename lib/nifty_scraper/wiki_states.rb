@@ -24,7 +24,11 @@ module NiftyScraper
         to_snake(clean(text))
       end
 
-      def write_json_file(data, path = File.expand_path(File.join(__dir__, '../../results', 'borders.json')))
+      def default_path
+        @default_path ||= File.expand_path(File.join(__dir__, '../../results', 'states.json'))
+      end
+
+      def write_json_file(data, path = default_path)
         File.open(path, 'w') { |f| f.write(JSON.pretty_generate(JSON[data.to_json])) }
       end
 
@@ -34,7 +38,7 @@ module NiftyScraper
 
       def parse
         document = Nokogiri::HTML(open(url))
-        data     = []
+        data     = {}
 
         document.at('table').search('tr').each_with_index do |row, index|
           next if index < 2
@@ -42,7 +46,7 @@ module NiftyScraper
           # state data
           # th contains state name, td contains all other data
           state_name = clean(row.search('th').text, false)
-          object     = { headers.first => state_name }
+          object     = {}
           cells      = row.search('td').map { |cell| clean(cell.text, false) }
 
           # some states have 1 less cell because their capital city is also their largest city
@@ -52,9 +56,10 @@ module NiftyScraper
             object[headers[index + 1]] = cell
           end
 
-          data << object
+          # data[state] << object
+          data[state_name] = object
         end
-        data
+        data.deep_symbolize_keys
       end
     end
   end

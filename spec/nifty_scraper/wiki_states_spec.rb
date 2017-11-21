@@ -117,22 +117,24 @@ module NiftyScraper
     describe 'parse', :vcr do
       let(:data) { WikiStates.parse }
 
-      it 'returns an array' do
-        expect(data).to be_a(Array)
+      it 'returns a hash' do
+        expect(data).to be_a(Hash)
       end
 
       it 'returns 50 states' do
-        expect(data.length).to eq(50)
-        expect(data.length).to eq(@states.length)
+        expect(data.keys.length).to eq(50)
+        expect(data.keys.length).to eq(@states.length)
       end
 
       it 'returns states with the correct names' do
-        expect(data.map { |state| state[:name].to_sym }).to eq(@states)
+        data.keys.each do |state|
+          expect(@states).to include(state)
+        end
       end
 
       it 'returns state properties' do
-        data.each do |state|
-          expect(state[:name]).not_to be_empty
+        data.values.each do |state|
+          # expect(state[:name]).not_to be_empty
           expect(state[:postal_abbreviation].length).to be(2)
           expect(state[:capital_city]).not_to be_empty
           expect(state[:largest_city]).not_to be_empty
@@ -142,7 +144,7 @@ module NiftyScraper
       end
 
       it 'returns states with established dates' do
-        data.each do |state|
+        data.values.each do |state|
           date = Date.strptime(state[:established], '%b %d, %Y')
           expect(date).to be_a(Date)
           expect(date).to be > (Date.parse('01-01-1787')) # Delaware
