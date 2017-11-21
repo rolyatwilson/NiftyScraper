@@ -71,25 +71,28 @@ module NiftyScraper
       end
     end
 
-    describe 'parse_main_headers' do
-      it 'handles single word headers' do
-        header = 'name'
-        expect(WikiStates.parse_main_headers(header)).to eq([header])
+    describe 'headers' do
+      let(:headers) { WikiStates.headers }
+      it 'has array of values' do
+        expect(headers).to be_a(Array)
       end
 
-      it 'handles & compounds' do
-        header = 'name & postal'
-        exp    = %w[name postal]
-        expect(WikiStates.parse_main_headers(header)).to eq(exp)
+      it 'has set number of values' do
+        expect(headers.length).to eq(13) # magic number 13
       end
-    end
 
-    describe 'merge sub_header' do
-      it 'merges sub headers into main headers' do
-        main_headers   = ['name', 'postal', 'cities', 'established', 'population', 'total area', 'land area', 'water area', 'reps']
-        sub_headers    = %w[capital largest mi2 km2 mi2 km2 mi2 km2]
-        merged_headers = %w[name postal capital_city largest_city established population total_area_mi2 total_area_km2 land_area_mi2 land_area_km2 water_area_mi2 water_area_km2 reps]
-        expect(WikiStates.merge_sub_headers(main_headers, sub_headers)).to eq(merged_headers)
+      it 'has strings' do
+        headers.each do |header|
+          expect(header).to be_a(String)
+          expect(header).not_to be_empty
+        end
+      end
+
+      it 'has snake case strings' do
+        headers.each do |header|
+          expect(header).not_to match(/[A-Z]/) # no caps
+          expect(header).not_to match(/\s/)    # no white space
+        end
       end
     end
 

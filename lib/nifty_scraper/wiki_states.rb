@@ -24,79 +24,20 @@ module NiftyScraper
         to_snake(clean(text))
       end
 
-      # First Row -- Main Headers
-      # Name & postal abbreviations | Cities | Established | Population | Total Area | Land Area | Water Area | Reps.
-      def parse_main_headers(cell)
-        # split "Name & postal abbreviation" into 2 headers
-        tokens = cell.split('&').map do |text|
-          text = sanitize(text)
-          text == 'cities' ? '_city' : text
-        end
-        tokens
-      end
-
-      # Main Headers
-      #   0  |   1    |   2    |      3      |     4      |      5     |     6     |      7     |   8   |
-      # Name | Postal | Cities | Established | Population | Total Area | Land Area | Water Area | Reps. |
-      #
-      # Merge Main Headers with Sub Headers
-      #   0  |   1    |    2    |    2    |      3      |      4     |    5   |   5    |   6    |   6    |   7    |   7    |  8   |
-      # Name | Postal | Capital | Largest | Established | Population | TA_mi2 | TA_km2 | LA_mi2 | LA_km2 | WA_mi2 | WA_km2 | Reps |
-      #   -  |   -    |    0    |    1    |      -      |      -     |    2   |   3    |   4    |   5    |   6    |   7    |  -   |
-      def merge_sub_headers(headers, cells)
-        cells.each_with_index do |cell, index|
-          case index
-          when 0
-            headers[2] = cell + '_city'
-          when 1
-            headers.insert(3, cell + '_city')
-          when 2
-            headers[6] = 'total_area_' + cell
-          when 3
-            headers.insert(7, 'total_area_' + cell)
-          when 4
-            headers[8] = 'land_area_' + cell
-          when 5
-            headers.insert(9, 'land_area_' + cell)
-          when 6
-            headers[10] = 'water_area_' + cell
-          when 7
-            headers.insert(11, 'water_area_' + cell)
-          end
-        end
-        headers
-      end
-
       def write_json_file(data, path = File.expand_path(File.join(__dir__, '../../results', 'states.json')))
         File.open(path, 'w') { |f| f.write(JSON.pretty_generate(JSON[data.to_json])) }
       end
 
+      def headers
+        @headers ||= %w{name postal_abbreviation capital_city largest_city established population total_area_mi2 total_area_km2 land_area_mi2 land_area_km2 water_area_mi2 water_area_km2 reps}
+      end
+
       def parse
         document = Nokogiri::HTML(open(url))
-        headers  = []
         data     = []
 
         document.at('table').search('tr').each_with_index do |row, index|
-          # main headers
-          if index == 0
-            cells = row.search('th').map do |cell|
-              clean(cell.text)
-            end
-
-            cells.each do |cell|
-              parse_main_headers(cell).each { |h| headers << h }
-            end
-            next
-          end
-
-          # sub headers
-          if index == 1
-            cells = row.search('th').map do |cell|
-              sanitize(cell.text)
-            end
-            headers = merge_sub_headers(headers, cells)
-            next
-          end
+          next if index < 2
 
           # state data
           # th contains state name, td contains all other data
